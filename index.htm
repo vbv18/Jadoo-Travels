@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>JADOO Travels</title>
+    <style>
+        * {
+            margin-left: 1%;
+            padding: 2px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .a {
+            display: inline-block;
+            width: 200px;
+            font-size: 300%;
+        }
+
+        .o {
+            margin: 0;
+            padding: 0;
+            text-decoration: color(orange);
+            text-decoration-style: orange;
+            -webkit-text-fill-color: orange;
+        }
+
+        .box0 {
+            width: 550px;
+            display: inline-block;
+            margin-left: 57%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #393e46;
+            padding: 15px;
+        }
+
+        .b:hover {
+            background-color: #393e46;
+            color: white;
+            transition-duration: 0.5s;
+            border-radius: 2px;
+            width: auto;
+        }
+
+        .btn {
+            border-radius: 8px;
+            background-color: orange;
+            color: black;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .box1 {
+            width: 400px;
+            display: inline-block;
+        }
+
+        .travel {
+            font-size: 400%;
+            font-style: bold;
+        }
+
+        .underline:hover {
+            color: orangered;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: black;
+            transition-duration: 0.4s;
+        }
+
+        button {
+            background-color: orange;
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            width: 120px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button:active {
+            background-color: black;
+            color: white;
+        }
+
+        .image {
+            width: 400px;
+            height: 400px;
+            display: inline-block;
+            margin-left: 20%;
+        }
+
+        .pone,
+        .ptwo,
+        .pthree,
+        .pfour {
+            width: 210px;
+            text-align: center;
+            display: inline-block;
+            height: 300px;
+        }
+
+        .p1,
+        .p2,
+        .p3,
+        .p4 {
+            width: 210px;
+            text-align: center;
+            display: inline-block;
+            color: #627587f3;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-top-right-radius: 32px;
+            border-top-left-radius: 32px;
+            height: auto;
+        }
+
+        .book {
+            width: 400px;
+            display: inline-block;
+            font-size: 250%;
+            font-weight: bold;
+        }
+
+        .steps {
+            display: inline-block;
+            margin-left: 35%;
+            width: 220px;
+            display: inline-block;
+            color: #627587f3;
+            box-shadow: rgba(53, 125, 154, 0.4) 0px 30px 90px;
+            border-radius: 8px;
+        }
+
+        .heart {
+            width: 20px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 25%;
+        }
+
+        .back {
+            padding: 10px;
+            color: rgb(60, 16, 16);
+            text-align: center;
+            font-weight: bold;
+            font-size: 250%;
+            font-family: 'Franklin Gothic Medium';
+            display: inline-block;
+            width: 300px;
+            position: relative;
+            bottom: 80px;
+            right: 24px;
+        }
+
+        .slides {
+            display: inline-block;
+            border: none;
+            height: 175px;
+            width: 500px;
+            margin-left: 25%;
+            overflow-y: scroll;
+        }
+
+        .slide1,
+        .slide2,
+        .slide3 {
+            border-radius: 8px;
+            width: auto;
+            height: auto;
+            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            width: 400px;
+            height: 135px;
+            margin-top: -20px;
+            margin-left: 25px;
+        }
+
+        /* .slides {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .slides::-webkit-scrollbar {
+            display: none;
+            -ms-overflow-style: none;
+        } */
+
+        .text1 {
+            font-size: 80%;
+            color: #627587f3;
+        }
+
+        .text2 {
+            font-weight: bold;
+            color: #393e46;
+        }
+
+        .text3 {
+            font-size: 60%;
+            color: #627587f3;
+        }
+
+        .s1,
+        .s2,
+        .s3,
+        .s4,
+        .s5 {
+            display: inline-block;
+            padding: 25px;
+            margin: 3%;
+            padding: 0;
+        }
+
+        .subscribe {
+            display: inline-block;
+            border-radius: 24px;
+            background-color: rgba(128, 0, 128, 0.13);
+            margin-left: 27%;
+            width: 600px;
+            height: 160px;
+        }
+
+        .line {
+            font-size: 150%;
+            font-weight: bold;
+            width: 440px;
+            text-align: center;
+            margin-left: 12%;
+        }
+
+        footer {
+            margin: 0;
+            padding: 0;
+            background-color: #393e46;
+            color: white;
+        }
+
+        .bf,
+        .bt,
+        .bth,
+        .bfo {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .bt {
+            margin-left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="a" style="padding: 0;">
+            <span class="d">
+                Jad<span class="o">oo</span>
+            </span>
+        </h1>
+
+        <h4 class="box0">
+            <a href="https://www.makemytrip.com/holidays-india/" target="_blank" class="b">Destinations</a>
+            <a href="https://www.makemytrip.com/hotels/" target="_blank" class="b">Hotels</a>
+            <a href="https://www.makemytrip.com/flights/" target="_blank" class="b">Flights</a>
+            <a href="https://www.makemytrip.com/" target="_blank" class="b">Bookings</a>
+            <a href="" class="b">Login</a>
+            <a href="" class="btn b">Sign Up</a>
+        </h4>
+    </header>
+
+    <br>
+
+    <div style="color: red;"><b>BEST DESTINATIONS AROUND THE WORLD</b></div>
+
+    <div class="box1">
+        <div class="travel">
+            <span class="underline">Travel</span>,
+            <span class="underline">enjoy</span>, and
+            <span class="underline">live</span> a new and full
+            <span class="underline">life</span>
+        </div>
+
+        <br>
+
+        <span>
+            Build Wicket longer admire do barton vanity itself do in it.Preferred to sportsmen it engrossed listening.
+            Park gatesell they west hard for the.
+        </span>
+
+        <br><br>
+
+        <button>Find out more</button>
+
+        <a href="https://www.youtube.com/@MakeMyTripOfficial" style="font-weight: bold; color: #393e4682;"
+            target="_blank">Play Demos</a>
+    </div>
+
+    <div class="image">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/426/784/original/people-travel-couple-with-backpack-and-equipment-set-go-to-travel-on-a-vacation-vector.jpg"
+            alt="loading..." class="image">
+    </div>
+
+    <br><br><br><br><br>
+
+    <div style="color: #627587f3; text-align: center; font-weight: bold; font-size: 150%;">Category</div>
+
+    <div
+        style="color: rgb(60, 16, 16); text-align: center; font-weight: bold; font-size: 250%; font-family: 'Franklin Gothic Medium';">
+
+        We Offer Best Services
+    </div>
+
+    <div align="center">
+
+        <div class="pone">
+
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.3Z_97j7Fgu0IXEmEEGoV1QAAAA?w=320&h=320&rs=1&pid=ImgDetMain"
+                    alt="loading..." style="width: 188px; height: 200px;">
+            </div>
+
+            <span style="font-weight: bold; font-size: 150%;">Calculated Weather</span>
+
+            <br>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolorem voluptate ea!
+        </div>
+
+        <div class="ptwo">
+            <img src="https://th.bing.com/th/id/OIP.72dhBV4IZDKgM9QNyUo6rgAAAA?rs=1&pid=ImgDetMain" alt="loading..."
+                style="width: 188px; height: 200px;">
+
+            <span style="font-weight: bold; font-size: 150%;">Best Flights</span>
+
+            <br>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut error accusantium unde.
+        </div>
+
+        <div class="pthree">
+            <img src="https://media.istockphoto.com/vectors/couple-dancing-tango-vector-id831306814?k=6&m=831306814&s=612x612&w=0&h=x3WsM9rlvfzlXMiW82boI36uY5CGbLkSIxY17RXktfU="
+                alt="loading..." style="width: 188px;">
+
+            <span style="font-weight: bold; font-size: 150%;">Local Events</span>
+
+            <br>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nostrum sequi veritatis.
+        </div>
+
+        <div class="pfour">
+            <img src="https://cdn.vectorstock.com/i/preview-1x/42/32/3-gear-stacked-cluster-logo-vector-43884232.jpg"
+                alt="loading..." style="width: 188px;">
+
+            <span style="font-weight: bold; font-size: 150%;">Customizations</span>
+
+            <br>
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet totam voluptate doloribus.
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div style="color: #627587f3; text-align: center; font-weight: bold; font-size: 150%;">Top Selling</div>
+
+    <div
+        style="color: rgb(60, 16, 16); text-align: center; font-weight: bold; font-size: 250%; font-family: 'Franklin Gothic Medium';">
+        Top Destinations
+    </div>
+
+    <div align="center">
+
+        <div class="p1">
+            <img src="https://media.istockphoto.com/id/663450984/photo/colosseum-at-sunrise-rome.jpg?s=612x612&w=0&k=20&c=HsL4Nb_UjUsYJHh_37ZNbPmo4-BW4G5NBqCc5M5hQ8g="
+                alt="loading..."
+                style="width: 210px; height: 200px; margin: 0; padding: 0; border-top-right-radius: 32px; border-top-left-radius: 32px;">
+
+            <span style="font-weight: bold; font-size: 100%;">
+                <pre>Rome, Italy                     $5.42k</pre>
+            </span>
+
+            <br>
+
+            <span style="font-weight: bold;">
+                <img src="https://th.bing.com/th/id/OIP.3rSHfY_FF1-8brI5gL0nMgHaHa?rs=1&pid=ImgDetMain" alt="!!"
+                    style="height: 20px; width: 20px;">10 days trip
+            </span>
+
+            <br><br>
+        </div>
+
+        <div class="p2">
+            <img src="https://th.bing.com/th/id/R.284fc1dee93f2edf024d20a4dff2c60f?rik=Eodrs3wa0QdoKQ&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2015%2f12%2f132972-England-landscape-architecture-nature-Tower_Bridge-UK.jpg&ehk=h7jPsIkcD51%2fD1eqj0x%2fBRY5JwtvaYrjkBmtkhgdbRs%3d&risl=&pid=ImgRaw&r=0"
+                alt="loading"
+                style="width: 210px; height: 200px; margin: 0; padding: 0; border-top-right-radius: 32px; border-top-left-radius: 32px;">
+
+            <span style="font-weight: bold; font-size: 100%;">
+                <pre>London, UK                     $4.2k</pre>
+            </span>
+
+            <br>
+
+            <span style="font-weight: bold;">
+                <img src="https://th.bing.com/th/id/OIP.3rSHfY_FF1-8brI5gL0nMgHaHa?rs=1&pid=ImgDetMain" alt="!!"
+                    style="height: 20px; width: 20px;">12 days trip
+            </span>
+
+            <br><br>
+        </div>
+
+        <div class="p3">
+            <img src="https://th.bing.com/th/id/OIP.aAUR4zkgM9NKAwOyhyzsSgHaEo?rs=1&pid=ImgDetMain" alt="loading..."
+                style="width: 210px; height: 200px; margin: 0; padding: 0; border-top-right-radius: 32px; border-top-left-radius: 32px;">
+
+            <span style="font-weight: bold; font-size: 100%;">
+                <pre>Full Europe                     $15k</pre>
+            </span>
+
+            <br>
+
+            <span style="font-weight: bold; ">
+                <img src="https://th.bing.com/th/id/OIP.3rSHfY_FF1-8brI5gL0nMgHaHa?rs=1&pid=ImgDetMain" alt="!!"
+                    style="height: 20px; width: 20px;">15 days trip
+            </span>
+
+            <br><br>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="book">
+        <div style="color: #627587f3; text-align: left; font-weight: bold; font-size: 75%;">Easy & Fast</div>
+
+        Book Your Next <span class="underline">Trip</span> In Three Easy Steps
+
+        <br>
+
+        <ul>
+            <li>
+                <span style="color: #627587f3; font-weight: bold; font-size: 60%;">Choose Destination</span>
+
+                <br>
+            </li>
+            <li>
+                <span style="color: #627587f3; font-weight: bold; font-size: 60%;">Make Payment</span>
+
+                <br>
+            </li>
+            <li>
+                <span style="color: #627587f3; font-weight: bold; font-size: 60%;">Reach Airport on Selected Date</span>
+
+                <br>
+            </li>
+        </ul>
+    </div>
+
+    <div class="steps">
+        <img src="https://static.businessinsider.com/image/55b29c8e371d2254008b98c8/image.jpg" alt="loading..."
+            style="width: 220px; margin-left: 4%; height: 150px; margin: 0; padding: 0; border-top-right-radius: 8px; border-top-left-radius: 8px;">
+
+        <span style="font-weight: bold; color: black;">Trip to Greece</span>
+
+        <br><br>
+
+        <span style="color: #627587f3; font-weight: bold;">14-29 June | by Vaibhav Garg</span>
+        <span style="color: #627587f3; font-weight: bold;">24 People are going.
+
+            <br><br><br>
+
+            <input type="checkbox" class="heart"><span>Add to Wishlist</span>
+        </span>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div style="color: #627587f3; text-align: left; font-weight: bold; font-size: 150%; margin: 0; padding: 0;">
+        TESTIMONIALS</div>
+
+    <span class="back">What People Say About Us.</span>
+
+    <!-- jbcy8bcjnc roucr vrhvosihcb jhrv  -->
+
+    <div class="slides">
+
+        <img src="https://www.bing.com/th?id=OIP.Y2gmXC4FNuM6bsrrrUIeDgHaKB&w=200&h=200&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+            alt="loading..." style="width: 45px; height: 45px; border-radius: 100px;" align="Top">
+
+        <div class="slide1">
+            <div class="text1">
+                <pre style="padding: 0; margin: 0;"> </pre>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt modi, libero deserunt,
+                alias asperiores voluptas nulla, quasi laudantium reiciendis expedita fugiat architecto et ea
+                assumenda."
+            </div>
+
+            <br>
+
+            <div class="text2">Laxmi Niwas Mittal</div>
+
+            <div class="text3">Jaipur, Rajasthan</div>
+        </div>
+
+        <br>
+
+        <img src="https://th.bing.com/th/id/OIP.5HqUBnCOIlPmHlGIaTO8UgHaHc?w=1000&h=1006&rs=1&pid=ImgDetMain"
+            alt="loading..." style="width: 45px; height: 45px; border-radius: 100px;" align="Top">
+
+        <div class="slide2">
+            <div class="text1">
+                <pre style="padding: 0; margin: 0;"> </pre>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime tempore vero magni
+                nostrum consectetur reprehenderit assumenda nihil eos sapiente ab minus repellat, sunt dolorum!""
+            </div>
+
+            <br>
+
+            <div class="text2">Laura Aunty</div>
+
+            <div class="text3">Cooch Behar, Bengal</div>
+        </div>
+
+        <br>
+
+        <img src="https://th.bing.com/th/id/OIP.IVt7LG7zk3WPxoCahmS1agHaEo?w=2880&h=1800&rs=1&pid=ImgDetMain"
+            alt="loading..." style="width: 45px; height: 45px; border-radius: 100px;" align="Top">
+
+        <div class="slide3">
+            <div class="text1">
+                <pre style="padding: 0; margin: 0;"> </pre>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime tempore vero magni
+                nostrum consectetur reprehenderit assumenda nihil eos sapiente ab minus repellat, sunt dolorum!""
+            </div>
+
+            <br>
+
+            <div class="text2">Jon Snow</div>
+
+            <div class="text3">Winterfell, Westeros</div>
+        </div>
+    </div>
+
+    <!-- fvprevibjc eocuvfh csdjn -->
+
+    <div class="spons">
+
+        <div class="s1">
+            <img src="https://iconape.com/wp-content/png_logo_vector/axon-airlines-logo.png" alt="loading..."
+                style="width: 150px; height: 125px;">
+        </div>
+
+        <div class="s2">
+            <img src="https://d24ndt2yiijez0.cloudfront.net/uploads/carrier/logo/251/jetstar-2012-vector-logo_resized.jpg"
+                alt="loading..." style="width: 175px; height: 150px;">
+        </div>
+
+        <div class="s3">
+            <img src="https://seekvectorlogo.com/wp-content/uploads/2018/09/expedia-vector-logo-small.png"
+                alt="loading..." style="width: 150px; height: 125px;">
+        </div>
+
+        <div class="s4">
+            <img src="https://www.servicenow.com/content/dam/servicenow/images/customers-asset/details/logo/logo-customer-qantas.png.imgw.720.720.jpg"
+                alt="loading..." style="width: 150px; height: 125px;">
+        </div>
+
+        <div class="s5">
+            <img src="https://th.bing.com/th/id/R.8d3683db8e59c20b7d8499debc9fe3f1?rik=PmEX93ReHO2soQ&riu=http%3a%2f%2fwww.castadiva.events%2fwp%2fwp-content%2fuploads%2f2016%2f02%2fAlitalia.jpg&ehk=%2bxBDup%2bm3IhiXguumObWMYEIvVRXMpWXAjeQggMLrf8%3d&risl=&pid=ImgRaw&r=0"
+                alt="loading..." style="width: 175px; height: 160px;">
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div>
+        <div class="subscribe">
+
+            <div class="line"><br>
+                Subscribe to get information, latest news and other interesting offers about Cobham
+            </div>
+
+            <div align="center">
+                <input type="text" placeholder="your@email">
+
+                <button>Subscribe</button>
+
+                <br>
+
+            </div>
+
+            <br><br>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <footer>
+
+        <div class="bottom" align="center">
+
+            <div class="bf" align="center">
+
+                <h1 style="font-size: 150%; font-weight: bold;">Jadoo.</h1>
+
+                <div style="color: rgba(255, 166, 0, 0.578);">Book your trip in minute, get full control for much
+                    longer.
+                </div>
+            </div>
+
+            <div class="bt">
+                <div style="font-size: 125%;">Company</div>
+
+                <br>
+
+                <div style="color: rgba(255, 166, 0, 0.578);">About <br> Careers <br> Mobile </div>
+            </div>
+
+            <div class="bth">
+
+                <div style="font-size: 125%;">Contact</div>
+
+                <br>
+
+                <div style="color: rgba(255, 166, 0, 0.578);">Help/FAQ <br> Press <br> Affilates </div>
+            </div>
+
+            <div class="bfo">
+                <div style="font-size: 125%;">More</div>
+
+                <br>
+
+                <div style="color: rgba(255, 166, 0, 0.578);">Airlinefees <br> Airline <br> Low fare tips </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div style="color: rgba(255, 166, 0, 0.578);">All rights reserved@jadoo.co</div>
+
+            <br>
+        </div>
+    </footer>
+</body>
+
+</html>
